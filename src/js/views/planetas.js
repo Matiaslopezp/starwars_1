@@ -9,7 +9,7 @@ export const Planetas= () => (
 
 		<h1>Planetas</h1>
 
-		<Cards_2 titulo="Planeta 1" boton="❤️"/>
+		<Cards_2 titulo="Planeta 1" boton="❤️" rutaDetalle="detalle"/>
 		<Cards_2 titulo="Planeta 2" boton="❤️"/>
 		<Cards_2 titulo="Planeta 3" boton="❤️"/>
 		<Cards_2 titulo="Planeta 4" boton="❤️"/>

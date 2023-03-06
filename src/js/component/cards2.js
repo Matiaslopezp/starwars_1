@@ -7,7 +7,11 @@ export const Cards_2 = (props) => {
     <div className="card-body">
       <h5 className="card-title">{props.titulo}</h5>
       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" className="btn btn-primary">Entrar</a>
+
+      <Link to={props.rutaDetalle}>
+      <a href="#" className="btn btn-primary">Ir a Detalle</a>
+      </Link>
+
       <Link to={props.ruta}><button className="btn btn-warning position-absolute bottom-0 end-0 translate-middle-x mb-2" onClick={()=>
       actions.addFav(props.titulo)  
     }>{props.boton}</button></Link>

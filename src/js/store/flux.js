@@ -1,7 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			favoritos:[],
+			planetas:[],
+
 			demo: [
 				{
 					title: "FIRST",
@@ -19,8 +20,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFav:(nombre)=>{
 				const store=getStore();
-				console.log("elementos será agregado a favortios",nombre)
-				setStore({favoritos:[...store.favoritos,nombre]})
+				console.log("planetas será agregado a favortios",nombre)
+				setStore({planetas:[...store.planetas,nombre]})
 			},
 
 			// Use getActions to call a function within a fuction
