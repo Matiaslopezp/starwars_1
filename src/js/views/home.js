@@ -9,8 +9,9 @@ import { Cards } from "../component/cards";
 export const Home = () => (
 	<div className="text-center mt-5">
 		<h1>Blog Star Wars</h1>
+		<div className="container fluid my-5">
 		<Cards titulo="Planetas" ruta="/planetas"/>
 		<Cards titulo="Personajes" ruta="/personajes"/>
-		
+		</div>
 	</div>
 );
