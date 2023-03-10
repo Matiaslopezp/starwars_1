@@ -73,6 +73,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			},
+
+			eliminarFav: (index) => {
+				const store = getStore();
+				const newFav = [...store.favoritos]; // crea una nueva matriz para evitar mutar la matriz original
+				newFav.splice(index, 1); // elimina el elemento en el índice proporcionado
+				setStore({ favoritos: newFav });
+			  },	
+
 			testGetStore:()=>{
 				console.log(getStore())
 			},
@@ -80,6 +88,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(getActions())
 			}
 			
+
 		}
 	};
 };
