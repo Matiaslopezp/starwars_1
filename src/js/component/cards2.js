@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Cards_2 = (props) => {
+  const{actions}=useContext(Context)
     return (<div className="card" style={{width: "18rem"}}>
     <img src={props.img} className="card-img-top" alt="..."/>
     <div className="card-body">
