@@ -1,27 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Cards_2 } from "../component/cards2";
 import {Boton} from "../component/boton.js"
+import { Context } from "../store/appContext";
 
 
-export const Planetas= () => (
-    <div className="text-center mt-5">
 
+export const Planetas = () => {
+	const { store, actions } = useContext(Context);
+	return <div className="container">
 		<h1>Planetas</h1>
-
-		<Cards_2 titulo="Planeta 1" boton="❤️" rutaDetalle="detalle"/>
-		<Cards_2 titulo="Planeta 2" boton="❤️"/>
-		<Cards_2 titulo="Planeta 3" boton="❤️"/>
-		<Cards_2 titulo="Planeta 4" boton="❤️"/>
-		<Cards_2 titulo="Planeta 5" boton="❤️"/>
-		<Cards_2 titulo="Planeta 6" boton="❤️"/>
-		<Cards_2 titulo="Planeta 7" boton="❤️"/>
-		<Cards_2 titulo="Planeta 8" boton="❤️"/>
-		<Cards_2 titulo="Planeta 9" boton="❤️"/>
-		<Cards_2 titulo="Planeta 10" boton="❤️"/>
-
+		<div className="row">
+			{store.planetas.map((objeto, index) => {
+				return <Cards_2 titulo={objeto.name} 
+				rutaDetalle={"/detalle/planetas/"+ objeto.uid}
+				boton="❤️" 
+				img="https://lafuerzanoticias.files.wordpress.com/2018/10/mustafar-tall.jpg?w=1536&h=768&crop=1"/>
+			})}
+		</div>
 		<div className="d-flex justify-content-center container-fluid pb-5">
-             <Boton ruta="/"/>
-             </div>
-    </div>
-);
+			<Boton ruta="/" />
+		</div>
+
+	</div>}

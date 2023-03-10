@@ -16,6 +16,7 @@ import { Cards_2} from "./component/cards2";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { DetallePersonajes } from "./views/detallePersonaje";
+import { DetallePlaneta } from "./views/detallePlaneta";
 
 //create your first component
 const Layout = () => {
@@ -32,7 +33,7 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/planetas" element={<Planetas/>} />
 						<Route path="/personajes" element={<Personajes />} />
-						<Route path="/detalle/planetas/:id" element={<DetallePersonajes/>} />
+						<Route path="/detalle/planetas/:id" element={<DetallePlaneta/>} />
 						<Route path="/detalle/personajes/:id" element={<DetallePersonajes/>} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>

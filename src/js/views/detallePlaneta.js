@@ -9,7 +9,7 @@ export const DetallePlaneta=()=>{
     const [planetas, setPlanetas] = useState({});
 
     useEffect(() => {
-        fetch("https://www.swapi.tech/api/people/" + id)
+        fetch("https://www.swapi.tech/api/planets/" + id)
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
